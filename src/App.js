@@ -15,6 +15,7 @@ function App() {
 
   return (
     <>
+      <h1>hello telegram</h1>
       <button onClick={onClose}>close</button>
     </>
   )
