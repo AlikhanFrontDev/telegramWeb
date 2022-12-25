@@ -3,16 +3,16 @@ import { useTelegram } from '../hooks/usetelegram';
 import "./Form.css"
 
 export default function Form() {
-    const [country, setCountry] = useState('');
-    const [street, setStreet] = useState('');
-    const [subject, setSubject] = useState('physical');
+    // const [country, setCountry] = useState('');
+    // const [street, setStreet] = useState('');
+    // const [subject, setSubject] = useState('physical');
     const {tg} = useTelegram();
 
-    useEffect(() => {
-        tg.MainButton.setParams({
-            text: 'send data'
-        })
-    }, [])
+    // useEffect(() => {
+    //     tg.MainButton.setParams({
+    //         text: 'send data'
+    //     })
+    // }, [])
 
     const onChangeCountry = (e) => {
         setCountry(e.target.value)
@@ -34,19 +34,19 @@ export default function Form() {
                     className={'input'}
                     type="text"
                     placeholder={'Страна'}
-                    value={country}
-                    onChange={onChangeCountry}
+                    // value={country}
+                    // onChange={onChangeCountry}
                 />
                 <input
                     className={'input'}
                     type="text"
                     placeholder={'Улица'}
-                    value={street}
-                    onChange={onChangeStreet}
+                    // value={street}
+                    // onChange={onChangeStreet}
                 />
                 <select
-                    value={subject}
-                    onChange={onChangeSubject}
+                    // value={subject}
+                    // onChange={onChangeSubject}
                     className={'select'}>
                     <option value={'physical'}>Физ. лицо</option>
                     <option value={'legal'}>Юр. лицо</option>
